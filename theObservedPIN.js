@@ -6,14 +6,7 @@ function getPINs(observed) {
         if (combinaisonsPrecedentes.length === 0){
             return variations;
         }
-        const resultat = []
-        combinaisonsPrecedentes.forEach(combinaison => {
-            variations.forEach(variation => {
-                resultat.push(combinaison + variation)
-
-            });
-        });
-        return resultat;
+        return combinaisonsPrecedentes.flatMap(combinaison => variations.map(variation => combinaison + variation));
     }
     
     const variationsOf = {
@@ -30,7 +23,6 @@ function getPINs(observed) {
     }
     
     return observed.split("").reduce(rajouterCombinaison,[]).sort();
-
 }
 
 exports.getPINs = getPINs
