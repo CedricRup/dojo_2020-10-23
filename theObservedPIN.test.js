@@ -1,3 +1,4 @@
-it ("glop",()=>{
-    expect(true).toBe(true);
+const observedPin  = require("./theObservedPIN")
+it ("un pin vide donne un résultat vide",()=>{
+    expect(observedPin.getPINs("")).toStrictEqual([]);
 })
