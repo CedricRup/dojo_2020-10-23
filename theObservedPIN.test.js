@@ -12,8 +12,8 @@ it ("un pin qui est égal à 5  donne un résultat   2 ou 4 ou 5 ou 6 ou 8",() =
     expect(observedPin.getPINs("5")).toStrictEqual(["2", "4", "5", "6", "8"]);
 })
 it ("un pin qui est égal à 11  donne un résultat 11 ou 22...",() => {
-    expect(observedPin.getPINs("11")).toStrictEqual(["11", "22", "44", "12", "21","14","41","24","42"]);
+    expect(observedPin.getPINs("11")).toStrictEqual(["11", "22", "44", "12", "21","14","41","24","42"].sort());
 })
 it ("un pin qui est égal à 13  donne un résultat 13...",() => {
-    expect(observedPin.getPINs("13")).toStrictEqual(["12","22","42","13","23","43","16","26","46"]);
+    expect(observedPin.getPINs("13")).toStrictEqual(["12","13","16","22","23","26","42","43","46"].sort());
 })
